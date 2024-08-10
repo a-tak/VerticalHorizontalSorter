@@ -1,6 +1,7 @@
 local Con = {
     STILL = "スチル",
-    ROTATION_ANGLE = 90.0
+    ROTATION_ANGLE = 90.0,
+    ZOOM = 0.76
 }
 
 -- メディアプールから全てのメディアを取得
@@ -78,6 +79,7 @@ if verticalTimelineItems then
         if mediaPoolItem:GetClipProperty("Format") == "DNG" then
             -- 回転方向は固定
             item:SetProperty("RotationAngle", Con.ROTATION_ANGLE)
+            item:SetProperty("ZoomX", Con.ZOOM)
         end
     end
 end

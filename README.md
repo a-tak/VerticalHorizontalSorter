@@ -1,4 +1,4 @@
-# -VerticalHorizontalSorter
+# VerticalHorizontalSorter
 
 このスクリプトはDaVinci Resolve Scripting APIを使用し縦写真と横写真をそれぞれ別のタイムラインに振り分けます。
 
