@@ -52,6 +52,17 @@ for _, mediaItem in ipairs(mediaItems) do
     end
 end
 
+-- 横の写真のタイムラインをクリップ名でソート
+table.sort(horizontalMediaItems, function(a, b)
+    return a:GetClipProperty("Clip Name") < b:GetClipProperty("Clip Name")
+end)
+
+-- 縦の写真のタイムラインをクリップ名でソート
+table.sort(verticalMediaItems, function(a, b)
+    return a:GetClipProperty("Clip Name") < b:GetClipProperty("Clip Name")
+end)
+
+
 project:SetCurrentTimeline(horizontalTimeline)
 for _, item in ipairs(horizontalMediaItems) do
     mediaPool:AppendToTimeline(item)
