@@ -1,7 +1,7 @@
 local Con = {
     STILL = "スチル",
     ROTATION_ANGLE = 90.0,
-    ZOOM = 0.76
+    ZOOM = 1.334
 }
 
 -- メディアプールから全てのメディアを取得
@@ -94,3 +94,16 @@ if verticalTimelineItems then
         end
     end
 end
+
+-- 縦用タイムラインの解像度を設定する
+-- 最初に今の縦横解像度を取得
+local width = verticalTimeline:GetSetting("timelineResolutionWidth")
+local height = verticalTimeline:GetSetting("timelineResolutionHeight")
+
+-- プロジェクト設定を使わない指定
+verticalTimeline:SetSetting("useCustomSettings", "1")
+
+verticalTimeline:SetSetting("timelineResolutionWidth", height)
+verticalTimeline:SetSetting("timelineResolutionHeight", width)
+verticalTimeline:SetSetting("timelineOutputResolutionWidth", height)
+verticalTimeline:SetSetting("timelineOutputResolutionHeight", width)
