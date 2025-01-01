@@ -1,7 +1,8 @@
 local Con = {
     STILL = "スチル",
     ROTATION_ANGLE = 90.0,
-    ZOOM = 1.334
+    ZOOM = 1.334,
+    DISTORTION = 0.14
 }
 
 -- メディアプールから全てのメディアを取得
@@ -91,6 +92,8 @@ if verticalTimelineItems then
             -- 回転方向は固定
             item:SetProperty("RotationAngle", Con.ROTATION_ANGLE)
             item:SetProperty("ZoomX", Con.ZOOM)
+            -- DNGファイルの時だけレンズ補正を設定
+            item:SetProperty("Distortion", Con.DISTORTION)
         end
     end
 end
