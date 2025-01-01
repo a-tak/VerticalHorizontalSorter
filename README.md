@@ -17,7 +17,8 @@ local Con = {
     STILL = "スチル",
     ROTATION_ANGLE = 90.0,
     ZOOM = 1.334,
-    DISTORTION = 0.14
+    DISTORTION = 0.14,
+    POWER_GRADE_PATH = [[D:\DaVinci Resolve\PowerGrade\GH7 Normalize.drx]]
 }
 ```
 
@@ -38,6 +39,12 @@ local Con = {
 ### DISTORTION
 
 DNGファイルのレンズ補正の設定。
+
+### POWER_GRADE_PATH
+
+DNGファイルに適用するパワーグレード(DRX形式)のパスを記載してください。DRXファイルはスチルの書き出しの形式をdrxにして書き出すことで作成できます。
+
+`[[` と `]]` の間にdrxファイルのパスを記載してください。何も適用したくない場合は空欄にしてください(存在しないパスでもよいです)。
 
 ## 実行方法
 
