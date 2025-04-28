@@ -2,7 +2,7 @@ local Con = {
     STILL = "スチル",
     ROTATION_ANGLE = 90.0,
     ZOOM = 1.334,
-    DISTORTION = 0.14,
+    DISTORTION = 0, -- フォクトレンダー NOKTON 25mm F0.95
     POWER_GRADE_PATH = [[D:\DaVinci Resolve\PowerGrade\GH7 Normalize.drx]]
 }
 
@@ -146,3 +146,6 @@ verticalTimeline:SetSetting("timelineResolutionWidth", height)
 verticalTimeline:SetSetting("timelineResolutionHeight", width)
 verticalTimeline:SetSetting("timelineOutputResolutionWidth", height)
 verticalTimeline:SetSetting("timelineOutputResolutionHeight", width)
+
+-- 横写真用タイムラインに戻して終了
+project:SetCurrentTimeline(horizontalTimeline)
